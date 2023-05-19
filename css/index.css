@@ -1,0 +1,43 @@
+/*custom properties*/
+:root{
+    --color-primario : #181818;
+    --color-secundario : white;
+  
+  
+  /*tipografia*/
+  
+  --tipo-principal : Arial, Helvetica, sans-serif;
+  --tipo-secundaria :verdana;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root{
+      --color-primario : #181818;
+      --color-secundario : white;
+    
+    
+    }
+  
+  }
+  
+  /*reset de margin y padding*/
+  
+  * {
+     margin: 0;
+     padding: 0; 
+     border: 0;
+     box-sizing: border-box;
+     vertical-align: baseline; 
+  }
+  
+  /*configuracion de la tipografia para toda la web*/
+
+body {
+
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: var(--tipo-principal);
+    color: var(--color-primario);
+    background-color: var(--color-secundario);
+  }
+  
