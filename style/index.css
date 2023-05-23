@@ -1,45 +1,81 @@
 /*custom properties*/
-:root{
-    --color-primario : #181818;
-    --color-secundario : white;
-  
-  
+:root {
+  --color-primario: #181818;
+  --color-secundario: white;
+
   /*tipografia*/
-  
-  --tipo-principal : Arial, Helvetica, sans-serif;
-  --tipo-secundaria :verdana;
+
+  --tipo-principal: Arial, Helvetica, sans-serif;
+  --tipo-secundaria: verdana;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primario: #181818;
+    --color-secundario: white;
   }
-  
-  @media (prefers-color-scheme: dark) {
-    :root{
-      --color-primario : #181818;
-      --color-secundario : white;
-    
-    
-    }
-  
-  }
-  
-  /*reset de margin y padding*/
-  
-  * {
-     margin: 0;
-     padding: 0; 
-     border: 0;
-     box-sizing: border-box;
-     vertical-align: baseline; 
-  }
-  
-  /*configuracion de la tipografia para toda la web*/
+}
+
+/*reset de margin y padding*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/*configuracion de la tipografia para toda la web*/
 
 body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--color-primario);
+  background-color:antiquewhite;
+}
 
-    min-height: 100vh;
-    font-size: 100%;
-    font-family: var(--tipo-principal);
-    color: var(--color-primario);
-    background-color: var(--color-secundario);
+/*sleider infinito*/
+.slider-container {
+  overflow: hidden;
+}
+
+img{
+  height: 200px;
+}
+
+.slider {
+  display: flex;
+  width: 30%;
+  animation: slide-animation 10s infinite linear;
+}
+
+.slider__card {
+  flex: 0 0 100%;
+  border: 1px solid black;
+  margin-right: 10px; /* Añade espaciado entre las tarjetas */
+  
+  /* Estilos de las tarjetas */
+}
+
+.slider__card-link {
+  text-decoration: none;
+
+}
+
+@keyframes slide-animation {
+  0% {
+    transform: translateX(0);
   }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  66.66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(-295%);
+  }
+}
 
-  
-  
