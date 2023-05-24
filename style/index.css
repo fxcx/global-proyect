@@ -96,12 +96,12 @@ img{
   width: 50%;
 }
 
-.subscription__content h2 {
+.subscription__content--h2 {
   font-size: 24px;
   font-weight: bold;
 }
 
-.subscription__content h3 {
+.subscription__content--h3 {
   font-size: 20px;
   font-weight: bold;
 }
