@@ -78,4 +78,97 @@ img{
     transform: translateX(-295%);
   }
 }
+/*seccion subscripcion*/
+.subscription {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 700px;
+  width: 700px;
+}
 
+.subscription__image img {
+  background-image: url(/assets/img/www.BancodeImagenesGratuitas.com-Cafe-2.jpg);
+  background-size: cover;
+}
+
+.subscription__content {
+  width: 50%;
+}
+
+.subscription__content h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.subscription__content h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/*footer*/
+footer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:200px;
+  background-color: #312424;
+  margin-top: 70%;
+}
+
+.icon {
+  display:grid;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 1.5rem;
+  margin-top: 3rem;
+  border-radius: 50%;
+  transition: all .8s;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background-color: #dd9c5c;
+  box-shadow:  0 0 20px #b0601e ;
+}
+
+.icon:hover:nth-child(2) {
+  background-color: #b55d38;
+  box-shadow:  0 0 20px #873a13;
+}
+
+.icon:hover:nth-child(3) {
+  background-color: #552418;
+  box-shadow: 0 0 20px #c25b16 ;
+}
+
+
+.icon i {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.7rem;
+}
+
+svg circle {
+  stroke-dasharray: 150;
+  transition: all .8s ease-in-out;
+}
+
+.icon:hover circle {
+  stroke-dasharray: 220;
+}
+
+.home-footer{
+  color: #fff;
+  
+}
