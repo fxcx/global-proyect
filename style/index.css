@@ -21,19 +21,44 @@
 * {
   margin: 0;
   padding: 0;
-  border: 0;
   box-sizing: border-box;
-  vertical-align: baseline;
 }
 
 /*configuracion de la tipografia para toda la web*/
 
 body {
-  min-height: 100vh;
-  font-size: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
   font-family: var(--tipo-principal);
   color: var(--color-primario);
-  background-color:antiquewhite;
+  background-color: rgb(239, 231, 213);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+/*titulo*/
+.title-destacado{
+  display:block;
+  padding: 1em;
+  margin: 1rem;
+  display:grid;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #593d0a;
+  border-radius: 30%;
+  transition: 0.3s ease;
+}
+
+.title-destacado:hover{
+  background-color: #3b2922;
+  color: #fff;
+
 }
 
 /*sleider infinito*/
@@ -41,27 +66,21 @@ body {
   overflow: hidden;
 }
 
-img{
-  height: 200px;
-}
-
 .slider {
   display: flex;
   width: 30%;
-  animation: slide-animation 10s infinite linear;
+  height: 200px;
+  animation: slide-animation 5s infinite linear;
 }
 
 .slider__card {
   flex: 0 0 100%;
   border: 1px solid black;
-  margin-right: 10px; /* Añade espaciado entre las tarjetas */
-  
-  /* Estilos de las tarjetas */
+  margin-right: 1rem;
 }
 
 .slider__card-link {
   text-decoration: none;
-
 }
 
 @keyframes slide-animation {
@@ -78,18 +97,23 @@ img{
     transform: translateX(-295%);
   }
 }
+
 /*seccion subscripcion*/
 .subscription {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   align-items: center;
-  height: 700px;
-  width: 700px;
+  padding-left: 33%;
+  background-color: #3b2922;
+  border-radius: 30%;
 }
 
-.subscription__image img {
+.subscription__image {
   background-image: url(/assets/img/www.BancodeImagenesGratuitas.com-Cafe-2.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  height: 100px;
+  width: 200px;
+  margin: 1rem;
 }
 
 .subscription__content {
@@ -97,78 +121,78 @@ img{
 }
 
 .subscription__content--h2 {
-  font-size: 24px;
+  font-size: 1rem;
   font-weight: bold;
 }
 
 .subscription__content--h3 {
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: bold;
 }
 
- p {
+.subscription__content--p {
   font-size: 16px;
+  text-align: left;
   line-height: 1.5;
 }
 
 /*footer*/
-footer{
-  display:flex;
-  justify-content: center;
-  align-items: center;
+footer {
   width: 100%;
-  height:200px;
-  background-color: #312424;
-  margin-top: 70%;
+  padding: 1em;
+  margin: 2rem 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #a18b69;
+  border-radius: 39%;
 }
 
 .icon {
-  display:grid;
   position: relative;
   width: 80px;
   height: 80px;
-  margin: 1.5rem;
-  margin-top: 3rem;
+  margin: 20px;
   border-radius: 50%;
-  transition: all .8s;
+  transition: all 0.8s;
   cursor: pointer;
 }
 
 .icon:hover {
-  background-color: #dd9c5c;
-  box-shadow:  0 0 20px #b0601e ;
+  background-color: #decd99;
+  box-shadow: 0 0 20px #d39d47;
 }
 
 .icon:hover:nth-child(2) {
-  background-color: #b55d38;
-  box-shadow:  0 0 20px #873a13;
+  background-color: #b87d4a;
+  box-shadow: 0 0 20px #c37d21;
 }
 
 .icon:hover:nth-child(3) {
-  background-color: #552418;
-  box-shadow: 0 0 20px #c25b16 ;
+  background-color: #f4912e;
+  box-shadow: 0 0 20px #dba11b;
 }
 
+.icon:hover:nth-child(4) {
+  background-color: #391d03;
+  box-shadow: 0 0 20px #50250c;
+}
 
 .icon i {
   color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   font-size: 1.7rem;
 }
 
 svg circle {
   stroke-dasharray: 150;
-  transition: all .8s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 
 .icon:hover circle {
   stroke-dasharray: 220;
-}
-
-.home-footer{
-  color: #fff;
-  
 }
