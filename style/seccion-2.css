@@ -1,0 +1,145 @@
+/*custom properties*/
+:root {
+  --color-primario: #181818;
+  --color-secundario: white;
+
+  /*tipografia*/
+
+  --tipo-principal: Arial, Helvetica, sans-serif;
+  --tipo-secundaria: verdana;
+}
+/*reset de margin y padding*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+/*configuracion de la tipografia para toda la web*/
+
+body {
+  font-family: var(--tipo-principal);
+  color: var(--color-negro);
+  background-color: rgb(239, 231, 213);
+  width: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "section" 
+    "article"
+    "foot";
+  
+  
+}
+
+header {
+  background-color: #fff;
+  grid-area: header;
+  height: 200px;
+}
+
+section {
+  grid-area: section;
+  background-color: #d2cdc9;
+  height: 200px;
+}
+
+article {
+  grid-area: article;
+  background-color: #2b1c04;
+  height: 200px;
+
+}
+
+/*footer*/
+footer {
+  grid-area: foot;
+  position: relative;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  background-color: #2c261d;
+  border-radius: 30%;
+  
+}
+
+.icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 60%;
+  transition: all 0.8s;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background-color: #cc9f17;
+  box-shadow: 0 0 20px #d39d47;
+}
+
+.icon:hover:nth-child(2) {
+  background-color: #b87d4a;
+  box-shadow: 0 0 20px #c37d21;
+}
+
+.icon:hover:nth-child(3) {
+  background-color: #f4912e8d;
+  box-shadow: 0 0 20px #ca690d95;
+}
+
+.icon:hover:nth-child(4) {
+  background-color: #643104ae;
+  box-shadow: 0 0 20px #883709b0;
+}
+
+.icon i {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.7rem;
+}
+
+svg circle {
+  stroke-dasharray: 150;
+  transition: all 0.8s ease-in-out;
+}
+
+.icon:hover circle {
+  stroke-dasharray: 220;
+}
+
+/*grano de cafe*/
+.grano-cafe {
+  margin: 2rem;
+  position: absolute;
+  align-content: center;
+  text-align: center;
+  bottom: 8em;
+  height: 80px;
+  background-color: #cc9f17;
+  border-radius: 3% 69%;
+}
+
+@font-face {
+  font-family: fuente;
+  src: url("/assets/img/font/misc/SweetCherryFree-K7MZo.otf");
+}
+
+.titulo{
+    padding: 1.5em;
+    position: relative;
+    font-family: fuente;
+    letter-spacing:2px;
+  }

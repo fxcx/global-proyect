@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style/index.css" />
+     <!--iconos-->
     <link
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
@@ -23,46 +24,47 @@
         </nav>
       </header>
   
-      <section class="slider-container">          <!-- destacados -->
+      <article class="slider-container">          <!-- destacados -->
         <h1 class="title-destacado">Destacados</h1>
         <div class="slider">
-          <div class="slider__card">
-            <img src="" alt="img" />
+          <picture class="slider__card">
+              <source media="(min-width: 800px)" srcset=""/>
+              <source media="(min-width: 350px)" srcset=""/>
+            <img src="./" alt="img" />
             <a href="enlace" class="slider__card-link">Producto 1</a>
-          </div>
-          <div class="slider__card">
+          </picture>
+          <picture class="slider__card">
+            <source media="(min-width: 800px)" srcset=""/>
+            <source media="(min-width: 350px)" srcset=""/>
             <img src="" alt="img" />
             <a href="enlace" class="slider__card-link">Producto 2</a>
-          </div>
-          <div class="slider__card">
+          </picture>
+          <picture class="slider__card">
+            <source media="(min-width: 800px)" srcset=""/>
+            <source media="(min-width: 350px)" srcset=""/>
             <img src="" alt="img" />
             <a href="enlace" class="slider__card-link">Producto 3</a>
-          </div>
+          </picture>
           <img src="" alt="img" />
-          <div class="slider__card">
+          <picture class="slider__card">
+            <source media="(min-width: 800px)" srcset=""/>
+            <source media="(min-width: 350px)" srcset=""/>
             <img src="" alt="img" />
             <a href="enlace" class="slider__card-link">Producto 4</a>
-          </div>
-          <div class="slider__card">
-            <img src="" alt="img" />
-            <a href="enlace" class="slider__card-link">Producto 5</a>
-          </div>
-          <div class="slider__card">
-            <img src="" alt="img" />
-            <a href="enlace" class="slider__card-link">Producto 6</a>
-          </div>
-          <img src="" alt="img" />
-        </div>
-      </section>
-
-      <section class="subscription">
-        <!--subscripcion-->
-        <div class="subscription__image"></div>
+          </picture>
+      </article>
+        
+      <section class="subscription">     <!--subscripcion-->
+          <picture class="subscription__image">
+            <!-- <source media="(min-width: 800px)" srcset=""/>
+            <source media="(min-width: 350px)" srcset=""/>
+            <img src="./assets/img/desktop/fondo_cafe.jpg" alt="cafe"> -->
+          </picture>
         <div class="subscription__content">
           <h2 class="subscription__content--h2">¡NO TE QUEDES SIN TU CAFÉ!</h2>
           <h3 class="subscription__content--h3">¡Suscríbete y ahorra!</h3>
-          <p>La mejor manera de comprar café.</p>
-          <p>
+          <p class="subscription__content--p">
+            La mejor manera de comprar café. <br>
             Si compras un producto periódicamente, ahora puedes utilizar nuestro
             sistema de suscripción y ¡ahorrarás tiempo y dinero en próximas
             compras!
@@ -71,8 +73,11 @@
         </div>
       </section>
  </main>
+   <!-- redes-->
       <footer>
-        <!-- redes-->
+        <div class="grano-cafe">
+        <h3 class="titulo"> Encontranos</h3>
+        </div>
         <div class="icon">
           <svg>
             <circle
