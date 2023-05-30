@@ -65,7 +65,11 @@ aside{
   height: 200px;
   background-color: rgb(131, 75, 12);
 }
-
+.comentarios {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 /*footer*/
 footer {

@@ -1,16 +1,33 @@
-const nuevoComentario = () => {
-    let li = document.createElement("li");
-    let valorIngresado = document.getElementById("nuevoComentario").Value;
-    let text = document.createTextNode(valorIngresado);
-    li.appendChild(text);
+// elementos del DOM
+const inputComentario = document.getElementById("nuevoComentario");
+const btnComentar = document.querySelector(".btn-comentarios button");
+const listaComentarios = document.getElementById("comentarios");
 
-    if(valorIngresado === ''){
-        alert('ingresar comentario')
-    }
-    document.getElementById('comentarios').appendChild(li);
+// Función comentario
+function agregarComentario() {
+  const valorIngresado = inputComentario.value.trim();
+
+  if (valorIngresado === "") {
+    alert("Ingrese un comentario.");
+    return;
+  }
+
+  const li = document.createElement("li");
+  li.textContent = valorIngresado;
+  li.classList.add("comentario");
+
+  const botonBorrar = document.createElement("button");
+  botonBorrar.textContent = "Borrar";
+  botonBorrar.classList.add("close");
+  botonBorrar.addEventListener("click", function() {
+    li.remove();
+  });
+
+  li.appendChild(botonBorrar);
+  listaComentarios.appendChild(li);
+
+  inputComentario.value = "";
 }
-
-document.getElementById('nuevoComentario').Value = '';
-li.className = "cometario"
-
-let borrar = document.createElement('p');
+ 
+// evento de clic al botón de comentar
+btnComentar.addEventListener("click", agregarComentario);
