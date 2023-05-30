@@ -5,7 +5,7 @@ const listaComentarios = document.getElementById("comentarios");
 
 // Función comentario
 function agregarComentario() {
-  const valorIngresado = inputComentario.value.trim();
+  const valorIngresado = inputComentario.value;
 
   if (valorIngresado === "") {
     alert("Ingrese un comentario.");

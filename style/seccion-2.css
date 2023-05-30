@@ -66,6 +66,9 @@ aside{
   top:1rem;
   bottom: 1rem;
   background-color: rgb(131, 75, 12);
+  border-radius: 20%;
+  padding: 1.5em;
+  margin: 1rem;
 }
 .comentarios {
   display: flex;
