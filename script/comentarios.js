@@ -19,14 +19,20 @@ const agregarComentario = () => {
   const botonBorrar = document.createElement("button");
   botonBorrar.textContent = "Borrar";
   botonBorrar.classList.add("close");
-  botonBorrar.addEventListener("click" = () => { li.remove();
+  botonBorrar.addEventListener("click", function () {
+    li.remove();
   });
 
   li.appendChild(botonBorrar);
   listaComentarios.appendChild(li);
 
   inputComentario.value = "";
-}
+
+  li.appendChild();
+  listaComentarios.appendChild(li);
+
+  inputComentario.value = "";
+};
 
 // evento de clic al botón de comentar
 btnComentar.addEventListener("click", agregarComentario);

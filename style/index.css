@@ -35,20 +35,22 @@ body {
   background-color: rgb(239, 231, 213);
 }
 
-
+li{
+  list-style: none;
+}
 
 /*sleider infinito*/
 .slider-container {
   background-color: #261f1f;
   overflow: hidden;
-  
 }
 
 .slider {
   display: flex;
+  flex-direction: row;
   width: 300px;
-  height: 200px;
-  animation: slide-animation 14s infinite linear;
+  height: 300px;
+  animation: slide-animation 25s infinite linear;
 }
 
 .slider__card {
@@ -58,21 +60,22 @@ body {
 }
 
 .slider__card-link {
+  background-color: #a18b69;
   text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+  justify-content: center;
+  text-align: center;
 }
 
 @keyframes slide-animation {
   0% {
-    transform: translateX(0);
+    transform: translateX(10%);
   }
-  33.33% {
-    transform: translateX(-100%);
-  }
-  66.66% {
-    transform: translateX(-200%);
-  }
+
   100% {
-    transform: translateX(-295%);
+    transform: translateX(-450%);
   }
 }
 
@@ -93,14 +96,6 @@ body {
 
 }
 
-.button{
-  border-radius: 40%;
-  padding: 1em;
-  margin: 1rem;
-  position: relative;
-  left: 80px;
-
-}
 
 
 /*seccion subscripcion*/
@@ -110,8 +105,8 @@ body {
   flex-direction:column;
   border-radius: 30%;
   background-color: #a18b69;
-  margin: 1rem;
   padding: 1em;
+  margin: 1rem auto;
 }
 
 .subscription__image {
@@ -155,9 +150,65 @@ body {
   max-width: 100%;
 }
 
+.button{
+  padding: 1em;
+  margin: 1rem;
+  position: relative;
+  left: 80px;
+  background-color: #f7f4ed;
+  border-radius: 3% 50%;
+
+}
+
+/*comentarios*/
+.container{
+  position: relative;
+  top:1rem;
+  bottom: 1rem;
+  background-color: rgb(131, 75, 12);
+  border-radius: 20%;
+  padding: 1.5em;
+  margin: 1rem auto;
+  height: 333px;
+}
+.comentarios {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#nuevoComentario {
+  width: 100%;
+  padding: 1em;
+  margin: 1rem;
+}
+
+.btn-comentarios button {
+  background-color: #cda42a;
+  color: rgb(17, 16, 16);
+  border-radius: 0% 50%;
+  padding: 1em;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.comentario {
+  margin-bottom: 2rem;
+  padding: 1em;
+  background-color: #f2f2f2;
+  border-radius: 10%;
+}
+
+.close {
+  float: right;
+  background-color: #90490b;
+  color: rgb(240, 231, 231);
+  cursor: pointer;
+}
+
+
 /*footer*/
 footer {
-  height: 200px;
+  height: 222px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,6 +220,7 @@ footer {
 
 .icon {
   position: relative;
+  top: 1rem;
   width: 80px;
   height: 80px;
   border-radius: 60%;
@@ -214,16 +266,16 @@ svg circle {
   stroke-dasharray: 220;
 }
 
-/*grano de cafe*/
+/*titulo grano de cafe imaginario*/
 .grano-cafe{
-  margin: 2rem;
+  margin: 1rem;
   position: absolute;
   align-content: center;
   text-align: center;
-  bottom: 8em;
+  bottom: 9em;
   height: 80px;
   background-color: #cc9f17;
-  border-radius: 3% 69%;
+  border-radius: 3% 56%;
 }
 
 @font-face {
@@ -239,7 +291,33 @@ svg circle {
 }
 
 /*desktop*/
-@media (max-width:700px) {
-   
+
+@media screen and (min-width: 500px){
+  .container {
+    grid-template-areas:
+      "header"
+      "article"
+      "section"
+      "aside"
+      "foot";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+
+  article {
+    grid-area: article;
+    background-color: #2b1c04;
+  }
+
+  section {
+    grid-area: section;
+    background-color: #39210d;
+  }
+  .subscription__image{
+    height: 300px;
+    background-size: cover;
+  }
+
   
 }

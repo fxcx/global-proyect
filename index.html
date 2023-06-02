@@ -29,28 +29,33 @@
         <div class="slider">
           <picture class="slider__card">
               <source media="(min-width: 800px)" srcset=""/>
-              <source media="(min-width: 350px)" srcset=""/>
-            <img src="./" alt="img" />
+              <source media="(min-width: 300px)" srcset=""/>
+            <img src="/assets/img/mobile/img/index/cafe-americano-min.jpg" height="220px"  width="300px" alt="americano" />
             <a href="enlace" class="slider__card-link">Producto 1</a>
           </picture>
           <picture class="slider__card">
             <source media="(min-width: 800px)" srcset=""/>
-            <source media="(min-width: 350px)" srcset=""/>
-            <img src="" alt="img" />
+            <source media="(min-width: 300px)" srcset=""/>
+            <img src="/assets/img/mobile/img/index/cafe-breve-min.jpg"  height="220px"  width="300px" alt="breve" />
             <a href="enlace" class="slider__card-link">Producto 2</a>
           </picture>
           <picture class="slider__card">
             <source media="(min-width: 800px)" srcset=""/>
             <source media="(min-width: 350px)" srcset=""/>
-            <img src="" alt="img" />
+            <img src="/assets/img/mobile/img/index/cafe-doppio-cafe-doble-min.jpg"  height="220px"  width="300px" alt="doppio" />
             <a href="enlace" class="slider__card-link">Producto 3</a>
           </picture>
-          <img src="" alt="img" />
+          <picture class="slider__card">
+          <source media="(min-width: 800px)" srcset=""/>
+          <source media="(min-width: 350px)" srcset=""/>
+          <img src="/assets/img/mobile/img/index/machado,adove.jpg"  height="220px"  width="300px" alt="machado" />
+          <a href="enlace" class="slider__card-link">Producto 4</a>
+        </picture>
           <picture class="slider__card">
             <source media="(min-width: 800px)" srcset=""/>
             <source media="(min-width: 350px)" srcset=""/>
-            <img src="" alt="img" />
-            <a href="enlace" class="slider__card-link">Producto 4</a>
+            <img src="/assets/img/mobile/img/index/cafe-vienes-min.jpg"  height="220px"  width="300px" alt="vienes" />
+            <a href="enlace" class="slider__card-link">Producto 5</a>
           </picture>
       </article>
         
@@ -73,21 +78,27 @@
         </div>
       </section>
       
-      <section class="comentarios">
+      <!--comentarios-->
+      
+      <section class="container">
+        <div class="comentarios">
         <div class="imagen">
-          <img src="https://www.pngarts.com/files/3/Avatar-Free-PNG-Image.png" alt="avatar">
+          <img src="https://www.pngarts.com/files/3/Avatar-Free-PNG-Image.png" height="30px" width="30px" alt="avatar" />
         </div>
         <div class="input">
-          <label for=""></label>
-          <input  id="nuevo comentario" type="text" placeholder="nuevo comentario..">
+          <label for="nuevoComentario"></label>
+          <input id="nuevoComentario" type="text" placeholder="Nuevo comentario.." />
           <div class="btn-comentarios">
-            <button>comentar</button>
-
+            <button>Comentar</button>
           </div>
-
+          <div>
+            <ul id="comentarios" class="comentarios-2"></ul>
+          </div>
         </div>
+      </div>
       </section>
  </main>
+ 
    <!-- redes-->
       <footer>
         <div class="grano-cafe">
@@ -149,6 +160,6 @@
         </div>
       </footer>
     
-
+   <script src="/script/comentarios.js"></script>
   </body>
 </html>
