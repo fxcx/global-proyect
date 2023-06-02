@@ -4,11 +4,11 @@ const btnComentar = document.querySelector(".btn-comentarios button");
 const listaComentarios = document.getElementById("comentarios");
 
 // Función comentario
-function agregarComentario() {
+const agregarComentario = () => {
   const valorIngresado = inputComentario.value;
 
   if (valorIngresado === "") {
-    alert("Ingrese un comentario.");
+    alert("escriba un comentario");
     return;
   }
 
@@ -19,8 +19,7 @@ function agregarComentario() {
   const botonBorrar = document.createElement("button");
   botonBorrar.textContent = "Borrar";
   botonBorrar.classList.add("close");
-  botonBorrar.addEventListener("click", function() {
-    li.remove();
+  botonBorrar.addEventListener("click" = () => { li.remove();
   });
 
   li.appendChild(botonBorrar);
@@ -28,6 +27,6 @@ function agregarComentario() {
 
   inputComentario.value = "";
 }
- 
+
 // evento de clic al botón de comentar
 btnComentar.addEventListener("click", agregarComentario);
