@@ -1,7 +1,7 @@
 /*custom properties*/
 :root {
-  --color-primario: #181818;
-  --color-secundario: white;
+  --color-negro: #181818;
+  --color-blanco:#fff;
 
   /*tipografia*/
 
@@ -9,13 +9,6 @@
   --tipo-secundaria: verdana;
 }
 
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-negro: #181818;
-    --color-blanco: rgb(250, 244, 244);
-  }
-}
 
 /*reset de margin y padding*/
 *, *::after, *::before{
@@ -106,7 +99,7 @@ li{
   border-radius: 30%;
   background-color: #a18b69;
   padding: 1em;
-  margin: 1rem auto;
+  margin: 1rem;
 }
 
 .subscription__image {
@@ -166,20 +159,26 @@ li{
   top:1rem;
   bottom: 1rem;
   background-color: rgb(131, 75, 12);
-  border-radius: 20%;
+  border-radius: 11%;
   padding: 1.5em;
-  margin: 1rem auto;
-  height: 333px;
-}
-.comentarios {
+  margin: 1rem ;
+  height: fit-content;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  justify-content: center;
 }
+.avatar__img{
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  margin: 1rem;
+  
+}
+
 #nuevoComentario {
-  width: 100%;
+  width: 90%;
   padding: 1em;
   margin: 1rem;
+  overflow-wrap: break-word;
 }
 
 .btn-comentarios button {
@@ -192,17 +191,38 @@ li{
 }
 
 .comentario {
+  width: 300px;
   margin-bottom: 2rem;
-  padding: 1em;
+  padding: 0.5em;
   background-color: #f2f2f2;
-  border-radius: 10%;
+  border-radius: 5%;
+  margin:1rem;
+}
+
+.comentarios-2{
+  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  line-height: 2rem;
+  
+
 }
 
 .close {
+  display: flex;
+  flex-wrap: wrap;
   float: right;
-  background-color: #90490b;
-  color: rgb(240, 231, 231);
+  font-size: 1rem;
+  color:var(--color-blanco);
   cursor: pointer;
+  border-radius: 100%;
+  width: 20px;
+  justify-content: center;
+  position: relative;
+  top: 0.5rem;
+  background-color: #682f00;
+ 
 }
 
 

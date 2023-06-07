@@ -54,7 +54,6 @@ header {
 article {
   grid-area: article;
   margin: auto 1rem auto;
-  background-color: #e38c007e;
   padding: 1em;
   border-radius: 3%;
   
@@ -79,23 +78,25 @@ article {
 section{
   grid-area: section;
   position: relative;
-  top:1rem;
-  bottom: 1rem;
-  background-color: rgb(131, 75, 12);
+  top:2rem;
+  background-color: rgb(131, 80, 13);
   border-radius: 20%;
   padding: 1.5em;
-  margin:auto 1rem;
-  height: 333px;
+  margin:1rem;
 }
-.comentarios {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.avatar__img{
+  background-size: cover;
+  height: 50px;
+  width: 50px;
+  margin: 1rem;
+  
 }
+
 #nuevoComentario {
-  width: 100%;
+  width: 90%;
   padding: 1em;
-  margin-bottom: 1rem;
+  margin: 1rem;
+  overflow-wrap: break-word;
 }
 
 .btn-comentarios button {
@@ -108,18 +109,38 @@ section{
 }
 
 .comentario {
-  margin-bottom: 1rem;
-  padding: 1em;
+  width: 300px;
+  margin-bottom: 2rem;
+  padding: 0.5em;
   background-color: #f2f2f2;
-  border-radius: 10%;
-  background-color: #90490b;
+  border-radius: 5%;
+  margin:1rem;
+}
+
+.comentarios-2{
+  width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  line-height: 2rem;
+  
+
 }
 
 .close {
+  display: flex;
+  flex-wrap: wrap;
   float: right;
-  background-color: #90490b;
-  color: rgb(240, 231, 231);
+  font-size: 1rem;
+  color:var(--color-secundario);
   cursor: pointer;
+  border-radius: 100%;
+  width: 20px;
+  justify-content: center;
+  position: relative;
+  top: 0.5rem;
+  background-color: #682f00;
+ 
 }
 
 /*footer*/

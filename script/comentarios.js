@@ -1,6 +1,6 @@
 // elementos del DOM
 const inputComentario = document.getElementById("nuevoComentario");
-const btnComentar = document.querySelector(".btn-comentarios button");
+const btnComentar = document.querySelector(".btn-comentarios");
 const listaComentarios = document.getElementById("comentarios");
 
 // Función comentario
@@ -17,7 +17,7 @@ const agregarComentario = () => {
   li.classList.add("comentario");
 
   const botonBorrar = document.createElement("button");
-  botonBorrar.textContent = "Borrar";
+  botonBorrar.textContent = "x";
   botonBorrar.classList.add("close");
   botonBorrar.addEventListener("click", function () {
     li.remove();
