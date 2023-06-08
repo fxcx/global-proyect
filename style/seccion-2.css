@@ -82,7 +82,8 @@ section{
   background-color: rgb(131, 80, 13);
   border-radius: 20%;
   padding: 1.5em;
-  margin:1rem;
+  margin:1rem auto;
+
 }
 .avatar__img{
   background-size: cover;
@@ -132,13 +133,13 @@ section{
   flex-wrap: wrap;
   float: right;
   font-size: 1rem;
-  color:var(--color-secundario);
+  color:var(--color-blanco);
   cursor: pointer;
   border-radius: 100%;
   width: 20px;
   justify-content: center;
   position: relative;
-  top: 0.5rem;
+  top: 0.3rem;
   background-color: #682f00;
  
 }
