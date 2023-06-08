@@ -312,7 +312,7 @@ svg circle {
 
 /*desktop*/
 
-@media screen and (min-width: 500px){
+/* @media screen and (min-width: 500px){
   .container {
     grid-template-areas:
       "header"
@@ -340,4 +340,4 @@ svg circle {
   }
 
   
-}
+} */
