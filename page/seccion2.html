@@ -9,24 +9,26 @@
     <link
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
-    />
+    />  
+  
     <title>sobre nosotros</title>
   </head>
   <body>
     <main class="container">
       <header>
-        <nav>
-          <ul>
+        <img src="" alt="logo">   
+        <nav  class="nav">      
+          <ul class="nav-list">
             <li><a href="/index.html">home</a></li>
             <li><a href="/page/seccion1.html">seccion1</a></li>
             <li><a href="/page/seccion2.html">seccion2</a></li>
           </ul>
         </nav>
       </header>
-      <article>
+      <article> 
         <picture class="img__article">
-          <source media="(min-width: 800px)" srcset="" />
-          <source media="(min-width: 350px)" srcset="" />
+          <!-- <source media="(min-width: 800px)" srcset="" />
+          <source media="(min-width: 350px)" srcset="" /> -->
           <img
             src="/assets/img/desktop/pexels-shvets-anna-2574474.jpg"
             alt="cafe"
@@ -48,8 +50,8 @@
           deliciosa experiencia del café
         </p>
         <picture class="img__article">
-          <source media="(min-width: 800px)" srcset="" />
-          <source media="(min-width: 350px)" srcset="" />
+          <!-- <source media="(min-width: 800px)" srcset="" />
+          <source media="(min-width: 350px)" srcset="" /> -->
           <img
             src="/assets/img/desktop/pexels-mehmet-çınar-15942814.jpg"
             alt="cafe"
@@ -91,7 +93,7 @@
           <label>Fecha de nacimiento:</label>
           <input type="date" name="birthday">
           
-          <label>Acepto los términos y condiciones:</label>
+          <label class="border_form-delete">Acepto los términos y condiciones:</label>
           <input type="checkbox" name="termsconditions">
           
           <input type="submit" value="Enviar">
@@ -176,5 +178,6 @@
       </footer>
     </main>
     <script src="/script/comentarios.js"></script>
+    <script src="/script/nav.js"></script>
   </body>
 </html>
