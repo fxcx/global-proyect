@@ -215,9 +215,10 @@ nav a:hover {
   background-color: #a18b69;
   border-radius: 11%;
   padding: 1.5em;
-  margin: 1rem;
+  margin: 1rem auto;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 .avatar__img {
   background-size: cover;
@@ -358,7 +359,7 @@ svg circle {
   letter-spacing: 2px;
 }
 
-/*desktop*/
+/*ipad*/
 
 @media screen and (min-width: 800px) {
   /*nav*/
@@ -410,14 +411,32 @@ svg circle {
   }
 
   /*comentarios*/
+
+  .container__comentarios {
+    width: 100%;
+  }
+  .avatar__img {
+    background-size: cover;
+    height: 50px;
+    width: 60px;
+    margin: 1rem;
+  }
+
+  #nuevoComentario {
+    width: 100%;
+  }
+
+  .comentario {
+    width: 500px;
+  }
+
+  .comentarios-2 {
+    width: 750px;
+  }
   .btn-comentarios button {
-    background-color: #cda42a;
-    color: rgb(17, 16, 16);
-    border-radius: 0% 50%;
-    padding: 1em;
     cursor: pointer;
     position: relative;
-    left: 100%;
+    left: 80%;
   }
 
   /*footer*/
@@ -426,11 +445,7 @@ svg circle {
   }
 }
 
-
-
-
-
-
+/* 
 
 @media screen and (min-width: 1300px) {
 
@@ -449,53 +464,6 @@ svg circle {
     margin: 1rem 3rem;
   }
 
-  nav li {
-    margin-right: 4rem;
-  }
 
-  .slider-container {
-    padding: 1em;
-  }
-
-  .title-destacado {
-    display: flex;
-    justify-content: center;
-  }
-  .subscription {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .subscription__image {
-    height: 600px;
-    width: 1000px;
-    background-size: cover;
-  }
-  .subscription__content {
-    background-color: #2c261d;
-    border-radius: 5%;
-    margin-top: 3rem;
-  }
-
-  .subscription__content--p {
-    color: var(--color-blanco);
-    max-width: 500px;
-  }
-
-  /*comentarios*/
-  .btn-comentarios button {
-    background-color: #cda42a;
-    color: rgb(17, 16, 16);
-    border-radius: 0% 50%;
-    padding: 1em;
-    cursor: pointer;
-    position: relative;
-    left: 100%;
-  }
-
-  /*footer*/
-  .icon {
-    margin-right: 3rem;
-  }
-}
+  
+} */

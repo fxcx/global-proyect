@@ -103,23 +103,15 @@ nav a:hover {
   padding: 2em;
 }
 
-
 /*article*/
 article {
   grid-area: article;
-  margin: 1rem;
-  padding: 1em;
   border-radius: 3%;
   margin: 1rem auto;
   width: 100%;
-  display: grid;
-  place-content: center;
 }
 
 .img__article {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 1rem;
 }
 
@@ -127,9 +119,9 @@ article {
   color: var(--color-blanco);
   font-size: large;
   padding: 1em;
-  margin: 1rem auto;
   border-radius: 5%;
   background-color: #2b2928;
+  margin: 1rem auto;
 }
 /*form*/
 .container__form {
@@ -193,7 +185,7 @@ section {
   grid-area: comentarios;
   position: relative;
   top: 2rem;
-  background-color: rgb(131, 80, 13);
+  background-color: #a18b69;
   border-radius: 20%;
   padding: 1.5em;
   margin: 1rem auto;
@@ -339,7 +331,7 @@ svg circle {
 }
 
 /*desktop*/
-@media  (min-width: 600px) {
+@media (min-width: 600px) {
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -384,20 +376,41 @@ svg circle {
   }
 
   /*comentarios*/
-.btn-comentarios button {
-  background-color: #cda42a;
-  color: rgb(17, 16, 16);
-  border-radius: 0% 50%;
-  padding: 1em;
-  cursor: pointer;
-  position: relative;
-  left: 100%;
-  
-}
+
+  .container__comentarios {
+    grid-area: comentarios;
+    width: 100%;
+    margin: 1rem;
+    padding: 2em;
+  }
+  .avatar__img {
+    height: 50px;
+    width: 60px;
+    margin: 1rem;
+  }
+
+  #nuevoComentario {
+    width: 100%;
+  }
+
+  .comentario {
+    width: 500px;
+    margin: 1rem;
+    border-bottom: #181818 solid 2px;
+  }
+
+  .comentarios-2 {
+    width: 500px;
+  }
+  .btn-comentarios button {
+    cursor: pointer;
+    position: relative;
+    left: 80%;
+  }
 
   footer {
     grid-area: foot;
-    width: 800px;
+    width: 100%;
     padding: 2em;
   }
 
@@ -407,11 +420,11 @@ svg circle {
 }
 
 /* 
-@media screen and (max-width: 1300px) {
+@media screen and (min-width: 1300px) {
   .container {
     display: grid;
-    grid-template-columns: 50%, 50%;
-    grid-template-rows: 600px 1fr 1.5fr 400px;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr 1fr 1.5fr 1fr;
     grid-template-areas:
       "header header"
       "article form"
@@ -423,14 +436,12 @@ svg circle {
 
   header {
     grid-area: header;
-    display: flex;
-    justify-content: center;
     border-bottom: #ffff solid 3px;
   }
 
   .logo {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     margin: 1rem 3rem;
   }
 
@@ -462,4 +473,4 @@ svg circle {
   footer {
     grid-area: foot;
   }
-} */
+}  */

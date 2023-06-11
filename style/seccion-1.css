@@ -1,33 +1,307 @@
 /*custom properties*/
 :root {
-    --color-negro: #181818;
-    --color-blanco: rgb(252, 252, 252);
-  
-    /*tipografia*/
-  
-    --tipo-principal: Arial, Helvetica, sans-serif;
-    --tipo-secundaria: verdana;
-  }
-  /*reset de margin y padding*/
-  *,
-  *::after,
-  *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+  --color-negro: #181818;
+  --color-blanco: rgb(252, 252, 252);
+
+  /*tipografia*/
+
+  --tipo-principal: Arial, Helvetica, sans-serif;
+  --tipo-secundaria: verdana;
+}
+/*reset de margin y padding*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*   
   img {
     max-width: 100%;
-  }
-  /*configuracion de la tipografia para toda la web*/
-  
-  body {
-    font-family: var(--tipo-principal);
-    color: var(--color-negro);
-    background-color: rgb(239, 231, 213);
-    width: 100%;
-    height: 100vh;
-  }
-  
+  } */
+/*configuracion de la tipografia para toda la web*/
 
+body {
+  font-family: var(--tipo-principal);
+  color: var(--color-negro);
+  background-color: rgb(239, 231, 213);
+  width: 100%;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin: 1rem;
+}
+img {
+  width: 320px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "heder heder heder"
+    "cart cart cart"
+    "footer footer footer";
+  place-content: center;
+}
+
+/* nav*/
+
+header {
+  grid-area: heder;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem auto;
+  border-bottom: #181818 solid 3px;
+  padding: 1em;
+}
+
+.logo {
+  height: 90px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 11px;
+  padding: 2em;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+nav li {
+  margin-right: 0.5rem;
+}
+
+nav a {
+  border-radius: 22px;
+  background-color: rgba(71, 18, 4, 255);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 1em;
+  transition: background-color 0.3s ease;
+  font-family: monospace;
+  font-family: fuente;
+}
+
+nav a:hover {
+  background-color: #ffffff;
+  color: #181818;
+  border-radius: 40%;
+  border-bottom: rgba(71, 18, 4, 255) solid 4px;
+  padding: 2em;
+}
+
+/* cart*/
+
+.container__cart {
+  grid-area: cart;
+}
+
+.carrito {
+  filter: invert(100%);
+  width: 45px;
+  height: 45px;
+}
+
+.carrito:hover {
+  transform: scale(1.5);
+}
+.contenedor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 1rem;
+}
+.contenedor > div {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: rgba(219, 183, 140, 255);
+  border-radius: 20px;
+}
+.contenedor > div:hover {
+  background-color: rgba(71, 18, 4, 255);
+  color: var(--color-blanco);
+}
+
+.informacion {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.informacion > p:first-child {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+}
+.informacion .precio {
+  font-size: 20px;
+  font-weight: 500;
+}
+.informacion .precio span {
+  font-size: 17px;
+  font-weight: 300;
+}
+.informacion button {
+  background-color: #f9f5f2;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+
+  font-size: 17px;
+  font-weight: 300;
+  cursor: pointer;
+}
+.informacion button:hover {
+  background-color: #d57530;
+  color: var(--color-blanco);
+}
+
+/*footer*/
+
+footer {
+  grid-area: footer;
+  padding: 1em;
+  height: 222px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #2c261d;
+  border-radius: 30%;
+  position: relative;
+  top: 1rem;
+}
+
+.icon {
+  position: relative;
+  top: 5rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 60%;
+  transition: all 0.8s;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background-color: #cc9f17;
+  box-shadow: 0 0 20px #d39d47;
+}
+
+.icon:hover:nth-child(2) {
+  background-color: #b87d4a;
+  box-shadow: 0 0 20px #c37d21;
+}
+
+.icon:hover:nth-child(3) {
+  background-color: #f4912e8d;
+  box-shadow: 0 0 20px #ca690d95;
+}
+
+.icon:hover:nth-child(4) {
+  background-color: #643104ae;
+  box-shadow: 0 0 20px #883709b0;
+}
+
+.icon i {
+  place-content: center;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.7rem;
+}
+
+svg circle {
+  stroke-dasharray: 150;
+  transition: all 0.8s ease-in-out;
+}
+
+.icon:hover circle {
+  stroke-dasharray: 220;
+}
+
+/*grano de cafe imaginario*/
+.grano-cafe {
+  position: absolute;
+  bottom: 10rem;
+  height: 80px;
+  background-color: #cc9f17;
+  border-radius: 3% 56%;
+}
+
+@font-face {
+  font-family: fuente;
+  src: url("/assets/img/font/misc/SweetCherryFree-K7MZo.otf");
+}
+
+.titulo {
+  padding: 1.5em;
+  position: relative;
+  font-family: fuente;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 50px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "heder heder heder"
+      "cart cart cart"
+      "footer footer footer";
+    place-content: center;
+  }
+
+  header {
+    grid-area: heder;
+    margin: 2rem;
+    border-bottom: #ffffff solid 5px;
+    padding: 2em;
+  }
+
+  .logo {
+    height: 200px;
+    width: 200px;
+  }
+
+  nav li {
+    margin-right: 1.5rem;
+  }
+  .container__cart {
+    grid-area: cart;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}

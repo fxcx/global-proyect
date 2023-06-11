@@ -45,7 +45,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const user = JSON.parse(localStorage.getItem("user"));
     console.log(user);
   
-    // repasar es lo mismo que lo de arriba
+    // repasar
     // JSON.parse(user)
     // const userJson = JSON.parse(user)
     // asi puedo trabajarlo con un objeto
@@ -87,7 +87,7 @@ window.addEventListener("DOMContentLoaded", () => {
         termsAndConditions,
       };
        
-      // guardo el usuario con json.stringify que guarda string
+      // guardo el usuario con json.stringify que guarda solo string
       localStorage.setItem("user", JSON.stringify(newUser));
     });
   });
